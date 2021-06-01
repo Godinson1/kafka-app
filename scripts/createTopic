@@ -1,0 +1,18 @@
+//Create topic inside running container
+/*
+------------------------------------------
+* RUN the docker exec command and tag the id/container name
+* Follow by the kafka-topics.sh file inside the running image
+* Follow by the bootstrap server tag or specified server and the port of the kafka image
+* Then the create tag, number of partitions, topic name and the replication factor.
+------------------------------------------
+docker exec -t kafka \
+  kafka-topics.sh \
+    --bootstrap-server :9092 \
+    --create \
+    --topic create_post \
+    --partitions 2 \
+    --replication-factor 1
+------------------------------------------
+------------------------------------------
+*/
