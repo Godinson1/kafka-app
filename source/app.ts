@@ -9,7 +9,7 @@ app.use("/posts", PostRouter);
 
 const PORT = process.env.PORT || 7000;
 
-//For Test - Run current producer message at defined interval.
+//For Test - Run producer
 produce().catch(console.error);
 
 app.listen(PORT, () => console.log(`Server running at Port: ${PORT}`));

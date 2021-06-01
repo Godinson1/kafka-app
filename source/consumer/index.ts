@@ -13,7 +13,6 @@ const consumer = kafka.consumer({ groupId: "test-app" });
 // Consuming data from the producer
 const consume = async () => {
   consumer.connect();
-  consumer.subscribe({ topic: "trial" });
   consumer.subscribe({ topic: "create_post" });
 
   consumer.run({
